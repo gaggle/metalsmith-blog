@@ -19,7 +19,7 @@
     "metalsmith-markdown": "^0.2.1",
     "metalsmith-nunjucks": "github:gaggle/metalsmith-nunjucks",
     "metalsmith-once": "github:gaggle/metalsmith-once",
-    "metalsmith-permalinks": "github:gaggle/metalsmith-permalinks#sibling-folder-strategy",
+    "metalsmith-permalinks": "github:gaggle/metalsmith-permalinks",
     "metalsmith-plugin-resolver": "github:gaggle/metalsmith-plugin-resolver",
     "metalsmith-pug": "^2.0.0",
     "metalsmith-puglayout": "github:gaggle/metalsmith-puglayout",
