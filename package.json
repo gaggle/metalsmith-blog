@@ -4,7 +4,11 @@
   "description": "",
   "main": "lib/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "clean": "rm -rf test/fixtures/**/build",
+    "test": "npm run _test && nyc report --reporter=html",
+    "lint:fix": "standard --fix",
+    "lint:code": "codeclimate analyze",
+    "_test": "standard && nyc --all mocha"
   },
   "author": "Jon Lauridsen <mail@jonlauridsen.com>",
   "license": "ISC",
@@ -19,5 +23,13 @@
     "metalsmith-pug": "^2.0.0",
     "metalsmith-puglayout": "git+https://github.com/gaggle/metalsmith-puglayout.git",
     "metalsmith-slug": "^0.2.1"
+  },
+  "devDependencies": {
+    "assert-dir-equal": "^1.1.0",
+    "metalsmith": "^2.3.0",
+    "mocha": "^3.5.0",
+    "nyc": "^11.1.0",
+    "recursive-readdir-sync": "^1.0.6",
+    "standard": "^10.0.3"
   }
 }
