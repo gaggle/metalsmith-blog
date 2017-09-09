@@ -23,7 +23,8 @@
     "metalsmith-plugin-resolver": "git+https://github.com/gaggle/metalsmith-plugin-resolver.git",
     "metalsmith-pug": "^2.0.0",
     "metalsmith-puglayout": "git+https://github.com/gaggle/metalsmith-puglayout.git",
-    "metalsmith-slug": "^0.2.1"
+    "metalsmith-slug": "^0.2.1",
+    "metalsmith-typeset": "0.0.1"
   },
   "devDependencies": {
     "assert-dir-equal": "^1.1.0",
