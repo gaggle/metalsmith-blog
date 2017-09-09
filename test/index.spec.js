@@ -20,6 +20,13 @@ describe('metalsmith-blog', function () {
     return assertMetalsmithBuildEquals(this.test.title)
   })
 
+  it('custom-layout', function () {
+    return assertMetalsmithBuildEquals(this.test.title, {
+      layout: {directory: 'custom-layout/templates'},
+      sources: ['**/*']
+    })
+  })
+
   it('move', function () {
     return assertMetalsmithBuildEquals(this.test.title, {
       layout: {directory: 'move/templates'},
