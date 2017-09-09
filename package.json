@@ -30,7 +30,7 @@
     "assert-dir-equal": "^1.1.0",
     "metalsmith": "^2.3.0",
     "mocha": "^3.5.0",
-    "nunjucks-tags-typography": "file:///Users/gaggle/Projects/nunjucks-tags-typography",
+    "nunjucks-tags-typography": "github:gaggle/nunjucks-tags-typography",
     "nyc": "^11.1.0",
     "recursive-readdir-sync": "^1.0.6",
     "standard": "^10.0.3"
