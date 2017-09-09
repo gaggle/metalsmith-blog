@@ -16,6 +16,7 @@
     "merge": "^1.2.0",
     "metalsmith-collections": "^0.9.0",
     "metalsmith-each": "^0.1.1",
+    "metalsmith-markdown": "^0.2.1",
     "metalsmith-nunjucks": "git+https://github.com/gaggle/metalsmith-nunjucks.git",
     "metalsmith-once": "git+https://github.com/gaggle/metalsmith-once.git",
     "metalsmith-permalinks": "git+https://github.com/gaggle/metalsmith-permalinks.git#sibling-folder-strategy",
