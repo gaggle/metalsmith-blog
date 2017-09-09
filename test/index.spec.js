@@ -12,7 +12,13 @@ describe('metalsmith-blog', function () {
     describe(name, function () {  // eslint-disable-line no-loop-func
       it(name, function () {
         return assertMetalsmithBuildEquals(
-          {layout: {default: 'default.pug', directory: '.'}},
+          {
+            layout: {
+              default: 'default.pug',
+              directory: '.',
+              inplace: require('nunjucks-tags-typography')
+            }
+          },
           path.join(dir),
           path.join(dir, 'expected')
         )
