@@ -38,6 +38,15 @@ describe('metalsmith-blog', function () {
   it('quotes', function () {
     return assertMetalsmithBuildEquals(this.test.title)
   })
+
+  it('rewrites-links', function () {
+    return assertMetalsmithBuildEquals(this.test.title, {
+      layout: {directory: 'rewrites-links/templates'},
+      pattern: 'blog/:title',
+      sources: ['**/*'],
+      relink: true
+    })
+  })
 })
 
 const assertMetalsmithBuildEquals = function (fixture, opts) {
