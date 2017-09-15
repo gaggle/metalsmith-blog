@@ -1,0 +1,3 @@
+{% quote %}
+**yes!**
+{% endquote %}

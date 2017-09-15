@@ -27,6 +27,10 @@ describe('metalsmith-blog', function () {
     })
   })
 
+  it('markdown-in-tags', function () {
+    return assertMetalsmithBuildEquals(this.test.title)
+  })
+
   it('move', function () {
     return assertMetalsmithBuildEquals(this.test.title, {
       layout: {directory: 'move/templates'},
