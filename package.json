@@ -24,7 +24,7 @@
     "metalsmith-pug": "^2.0.0",
     "metalsmith-puglayout": "github:gaggle/metalsmith-puglayout",
     "metalsmith-slug": "^0.2.1",
-    "metalsmith-typeset": "0.0.1"
+    "metalsmith-typeset": "0.0.2"
   },
   "devDependencies": {
     "assert-dir-equal": "^1.1.0",
