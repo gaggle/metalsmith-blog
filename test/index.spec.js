@@ -51,6 +51,10 @@ describe('metalsmith-blog', function () {
       relink: true
     })
   })
+
+  it('typesetting', function () {
+    return assertMetalsmithBuildEquals(this.test.title)
+  })
 })
 
 const assertMetalsmithBuildEquals = function (fixture, opts) {
