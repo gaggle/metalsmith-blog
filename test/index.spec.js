@@ -16,10 +16,6 @@ describe('metalsmith-blog', function () {
     return assertMetalsmithBuildEquals(this.test.title)
   })
 
-  it('codequotes', function () {
-    return assertMetalsmithBuildEquals(this.test.title)
-  })
-
   it('custom-layout', function () {
     return assertMetalsmithBuildEquals(this.test.title, {
       layout: {directory: 'custom-layout/templates'},
