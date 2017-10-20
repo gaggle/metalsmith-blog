@@ -36,6 +36,10 @@ const findFiles = function (dir, pattern) {
 
 const beautifyFile = function (file) {
   return fs.readFile(file, 'utf8')
-    .then(data => beautifyHtml(data, {indent_size: 2, end_with_newline: true}))
+    .then(data => beautifyHtml(data, {
+      indent_size: 2,
+      end_with_newline: true,
+      wrap_line_length: 80
+    }))
     .then(data => fs.writeFile(file, data, 'utf8'))
 }
