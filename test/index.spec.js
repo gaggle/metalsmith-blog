@@ -1,34 +1,34 @@
 /* global describe, it */
 'use strict'
 const assertDir = require('assert-dir-equal')
-const Metalsmith = require('metalsmith')
-const path = require('path')
 const merge = require('lodash.merge')
+const path = require('path')
 
+const helpers = require('./test-helpers')
 const blog = require('../lib/index')
 
 describe('metalsmith-blog', function () {
   it('basic', function () {
-    return assertMetalsmithBuildEquals(this.test.title)
+    return assertFixture(this.test.title)
   })
 
   it('code', function () {
-    return assertMetalsmithBuildEquals(this.test.title)
+    return assertFixture(this.test.title)
   })
 
   it('custom-layout', function () {
-    return assertMetalsmithBuildEquals(this.test.title, {
+    return assertFixture(this.test.title, {
       layout: {directory: 'custom-layout/templates'},
       sources: ['**/*']
     })
   })
 
   it('markdown-in-tags', function () {
-    return assertMetalsmithBuildEquals(this.test.title)
+    return assertFixture(this.test.title)
   })
 
   it('move', function () {
-    return assertMetalsmithBuildEquals(this.test.title, {
+    return assertFixture(this.test.title, {
       layout: {directory: 'move/templates'},
       pattern: 'foo',
       sources: ['**/*']
@@ -36,11 +36,11 @@ describe('metalsmith-blog', function () {
   })
 
   it('quotes', function () {
-    return assertMetalsmithBuildEquals(this.test.title)
+    return assertFixture(this.test.title)
   })
 
   it('rewrites-links', function () {
-    return assertMetalsmithBuildEquals(this.test.title, {
+    return assertFixture(this.test.title, {
       layout: {directory: 'rewrites-links/templates'},
       pattern: 'blog/:title',
       sources: ['**/*'],
@@ -49,11 +49,11 @@ describe('metalsmith-blog', function () {
   })
 
   it('typesetting', function () {
-    return assertMetalsmithBuildEquals(this.test.title)
+    return assertFixture(this.test.title)
   })
 })
 
-const assertMetalsmithBuildEquals = function (fixture, opts) {
+const assertFixture = function (fixture, opts) {
   const dir = path.resolve(path.join('test', 'fixtures', fixture))
   opts = merge({
     layout: {
@@ -63,23 +63,9 @@ const assertMetalsmithBuildEquals = function (fixture, opts) {
     }
   }, opts)
 
-  let dst = path.join(dir, 'build')
-  return buildMetalsmith(path.join(dir, 'source'), dst, opts)
-    .then(function () {
-      assertDir(dst, path.join(dir, 'expected'), {filter: () => true})
-    })
-}
-
-const buildMetalsmith = function (src, dst, opts) {
-  const metalsmith = new Metalsmith('test/fixtures')
-  return new Promise(function (resolve, reject) {
-    metalsmith
-      .source(src)
-      .destination(dst)
-      .use(blog(opts))
-      .build(err => {
-        if (err) return reject(err)
-        resolve()
-      })
-  })
+  const dst = path.join(dir, 'build')
+  const expected = path.join(dir, 'expected')
+  return helpers.buildMetalsmith(path.join(dir, 'source'), dst, blog(opts))
+    .then(() => helpers.beautifyFolder(dst))
+    .then(() => assertDir(dst, expected, {filter: () => true}))
 }

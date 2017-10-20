@@ -8,7 +8,7 @@
     "test": "npm run _test && nyc report --reporter=html",
     "lint:fix": "standard --fix",
     "lint:code": "codeclimate analyze",
-    "_test": "standard && nyc --all mocha"
+    "_test": "nyc --all mocha && standard"
   },
   "author": "Jon Lauridsen <mail@jonlauridsen.com>",
   "license": "ISC",
@@ -28,6 +28,9 @@
   },
   "devDependencies": {
     "assert-dir-equal": "^1.1.0",
+    "fs-extra": "^4.0.2",
+    "glob": "^7.1.2",
+    "js-beautify": "^1.7.4",
     "lodash.merge": "^4.6.0",
     "metalsmith": "^2.3.0",
     "mocha": "^3.5.0",
