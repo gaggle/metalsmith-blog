@@ -13,7 +13,7 @@
   "author": "Jon Lauridsen <mail@jonlauridsen.com>",
   "license": "ISC",
   "dependencies": {
-    "merge": "^1.2.0",
+    "lodash.merge": "^4.6.0",
     "metalsmith-collections": "^0.9.0",
     "metalsmith-each": "^0.1.1",
     "metalsmith-markdown": "^0.2.1",
@@ -27,16 +27,15 @@
     "metalsmith-typeset": "0.0.2"
   },
   "devDependencies": {
-    "assert-dir-equal": "^1.1.0",
+    "assert-dir": "github:gaggle/assert-dir",
     "fs-extra": "^4.0.2",
     "glob": "^7.1.2",
     "js-beautify": "^1.7.4",
-    "lodash.merge": "^4.6.0",
     "metalsmith": "^2.3.0",
     "mocha": "^3.5.0",
     "nunjucks-tags-typography": "github:gaggle/nunjucks-tags-typography",
     "nyc": "^11.1.0",
-    "recursive-readdir-sync": "^1.0.6",
-    "standard": "^10.0.3"
+    "standard": "^10.0.3",
+    "xmlcompare": "github:gaggle/xmlcompare"
   }
 }
