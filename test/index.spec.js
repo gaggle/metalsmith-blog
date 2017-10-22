@@ -76,5 +76,8 @@ const assertFixture = function (fixture, opts) {
 }
 
 const DOMCompare = function (file, actualPath, expectedPath, actualData, expectedData) {
-  xmlcompare(actualData, expectedData, {ignoreEmpty: true})
+  xmlcompare(actualData, expectedData, {
+    ignoreEmpty: true,
+    ignoreWarnings: true
+  })
 }
