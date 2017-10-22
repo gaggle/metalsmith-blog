@@ -1,11 +1,13 @@
 /* global describe, it */
 'use strict'
-const assertDir = require('assert-dir-equal')
-const merge = require('lodash.merge')
+const assertDir = require('assert-dir')
+const merge = require('merge')
 const path = require('path')
+const xmlcompare = require('xmlcompare')
+
+const blog = require('../lib/index')
 
 const helpers = require('./test-helpers')
-const blog = require('../lib/index')
 
 describe('metalsmith-blog', function () {
   it('backticks', function () {
@@ -70,6 +72,9 @@ const assertFixture = function (fixture, opts) {
   const dst = path.join(dir, 'build')
   const expected = path.join(dir, 'expected')
   return helpers.buildMetalsmith(path.join(dir, 'source'), dst, blog(opts))
-    .then(() => helpers.beautifyFolder(dst))
-    .then(() => assertDir(dst, expected, {filter: () => true}))
+    .then(() => assertDir(dst, expected, [['**/*.html', DOMCompare]]))
+}
+
+const DOMCompare = function (file, actualPath, expectedPath, actualData, expectedData) {
+  xmlcompare(actualData, expectedData, {ignoreEmpty: true})
 }

@@ -27,7 +27,7 @@
     "metalsmith-typeset": "0.0.2"
   },
   "devDependencies": {
-    "assert-dir-equal": "^1.1.0",
+    "assert-dir": "github:gaggle/assert-dir",
     "fs-extra": "^4.0.2",
     "glob": "^7.1.2",
     "js-beautify": "^1.7.4",
@@ -36,7 +36,7 @@
     "mocha": "^3.5.0",
     "nunjucks-tags-typography": "github:gaggle/nunjucks-tags-typography",
     "nyc": "^11.1.0",
-    "recursive-readdir-sync": "^1.0.6",
-    "standard": "^10.0.3"
+    "standard": "^10.0.3",
+    "xmlcompare": "github:gaggle/xmlcompare"
   }
 }
