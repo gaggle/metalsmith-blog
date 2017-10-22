@@ -1,7 +1,7 @@
 /* global describe, it */
 'use strict'
 const assertDir = require('assert-dir')
-const merge = require('merge')
+const merge = require('lodash.merge')
 const path = require('path')
 const xmlcompare = require('xmlcompare')
 
