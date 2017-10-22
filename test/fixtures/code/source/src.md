@@ -7,3 +7,11 @@ foo
   "foo": "bar"
 }
 {% endcode %}
+
+```
+foo
+```
+
+```bash
+ls
+```
