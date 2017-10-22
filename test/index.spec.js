@@ -10,10 +10,6 @@ const blog = require('../lib/index')
 const helpers = require('./test-helpers')
 
 describe('metalsmith-blog', function () {
-  it('backticks', function () {
-    return assertFixture(this.test.title)
-  })
-
   it('basic', function () {
     return assertFixture(this.test.title)
   })
