@@ -9,3 +9,7 @@ eggs
 {% pullquote right %}spam{% endpullquote %}
 
 eggs
+
+{% blockquote Title https://link "A description" %}
+{% asset_img path.png "A description" %}
+{% endblockquote %}
