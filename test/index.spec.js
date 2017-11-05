@@ -25,6 +25,10 @@ describe('metalsmith-blog', function () {
     })
   })
 
+  it('embeddings', function () {
+    return assertFixture(this.test.title)
+  })
+
   it('markdown-in-tags', function () {
     return assertFixture(this.test.title)
   })
