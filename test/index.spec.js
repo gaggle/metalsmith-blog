@@ -29,6 +29,10 @@ describe('metalsmith-blog', function () {
     return assertFixture(this.test.title)
   })
 
+  it('more', function () {
+    return assertFixture(this.test.title)
+  })
+
   it('move', function () {
     return assertFixture(this.test.title, {
       layout: {directory: 'move/templates'},
