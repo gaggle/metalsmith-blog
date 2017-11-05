@@ -29,6 +29,10 @@ describe('metalsmith-blog', function () {
     return assertFixture(this.test.title)
   })
 
+  it('links', function () {
+    return assertFixture(this.test.title)
+  })
+
   it('markdown-in-tags', function () {
     return assertFixture(this.test.title)
   })
