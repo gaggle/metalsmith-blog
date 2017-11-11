@@ -1,7 +1,6 @@
 {
   "name": "metalsmith-blog",
   "version": "0.0.0",
-  "description": "",
   "main": "lib/index.js",
   "scripts": {
     "clean": "rm -rf test/fixtures/**/build",
