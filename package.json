@@ -12,12 +12,11 @@
   "author": "Jon Lauridsen <mail@jonlauridsen.com>",
   "license": "ISC",
   "dependencies": {
-    "html-entities": "^1.2.1",
     "is-utf8": "^0.2.1",
     "lodash.merge": "^4.6.0",
-    "markdown-it": "^8.4.0",
     "metalsmith-collections": "^0.9.0",
     "metalsmith-each": "^0.1.1",
+    "metalsmith-markdownit": "github:gaggle/metalsmith-markdownit",
     "metalsmith-nunjucks": "github:gaggle/metalsmith-nunjucks",
     "metalsmith-once": "github:gaggle/metalsmith-once",
     "metalsmith-permalinks": "github:gaggle/metalsmith-permalinks",
