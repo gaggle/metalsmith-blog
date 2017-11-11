@@ -33,7 +33,7 @@
     "glob": "^7.1.2",
     "js-beautify": "^1.7.4",
     "metalsmith": "^2.3.0",
-    "mocha": "^3.5.0",
+    "mocha": "^4.0.1",
     "nunjucks-tags-typography": "github:gaggle/nunjucks-tags-typography",
     "nyc": "^11.1.0",
     "standard": "^10.0.3",
